@@ -22,6 +22,18 @@ public class Exceptions
     }
     @NoArgsConstructor
     @ResponseStatus(value = HttpStatus.NOT_FOUND)
+    public static class MissingLevel extends RuntimeException{
+        /**
+         * Instantiates a new TournamentNotFound exception.
+         *
+         * @param message the message
+         */
+        public MissingLevel(String message) {
+            super(message);
+        }
+    }
+    @NoArgsConstructor
+    @ResponseStatus(value = HttpStatus.NOT_FOUND)
     public static class TournamentNotFound extends RuntimeException{
         /**
          * Instantiates a new TournamentNotFound exception.
