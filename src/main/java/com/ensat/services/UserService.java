@@ -1,12 +1,14 @@
 package com.ensat.services;
+
 import com.ensat.dto.UserDTO;
 import com.ensat.entities.User;
 import com.ensat.exception.Exceptions;
 import com.ensat.repositories.IUserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 import java.util.Optional;
 

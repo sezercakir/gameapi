@@ -22,9 +22,9 @@ public class UserDTO
     @Getter
     @Setter
     public static class UserCreateDTO {
-        private String userName;
         private Long id;
         private int level;
+        private int coin;
     }
     @Getter
     @Setter

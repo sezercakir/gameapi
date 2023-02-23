@@ -36,6 +36,6 @@ public class UserController {
     public UserDTO.UserCreateDTO createUser(@RequestBody User user)
     {
         userService.addUser(user);
-        return new UserDTO.UserCreateDTO(user.getUsername(), user.getId(), user.getLevel());
+        return new UserDTO.UserCreateDTO(user.getId(), user.getLevel(), user.getLevel());
     }
 }

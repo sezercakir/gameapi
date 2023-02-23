@@ -102,11 +102,6 @@ public class TournamentController
         {
             throw new Exceptions.PlayerClaimError();
         }
-        // check the user level for entering the tournament.
-        if (user_opt.get().getLevel() < 20)
-        {
-            throw new Exceptions.MissingLevel("Level is not sufficient to enter the new tournament.");
-        }
         // calculation the player's group level
         User user = user_opt.get();
         int player_level = user.getLevel();

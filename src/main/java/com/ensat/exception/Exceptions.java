@@ -22,6 +22,19 @@ public class Exceptions
     }
     @NoArgsConstructor
     @ResponseStatus(value = HttpStatus.NOT_FOUND)
+    public static class UserAlreadyExist extends RuntimeException {
+
+        /**
+         * Instantiates a new resource not found exception.
+         *
+         * @param message the message
+         */
+        public UserAlreadyExist(String message) {
+            super(message);
+        }
+    }
+    @NoArgsConstructor
+    @ResponseStatus(value = HttpStatus.NOT_FOUND)
     public static class MissingLevel extends RuntimeException{
         /**
          * Instantiates a new TournamentNotFound exception.

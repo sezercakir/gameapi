@@ -21,7 +21,8 @@ public class SpringBootWebApplication {
         {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, null, e);
         }
-        catch (Exceptions.PlayerAlreadyAttendTournament | Exceptions.GroupSizeOver | Exceptions.PlayerClaimError e)
+        catch (Exceptions.PlayerAlreadyAttendTournament | Exceptions.GroupSizeOver |
+               Exceptions.PlayerClaimError | Exceptions.UserAlreadyExist e)
         {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, null, e);
         }

@@ -6,9 +6,11 @@ import com.ensat.entities.TournamentGroup;
 import com.ensat.entities.TournamentPlayers;
 import com.ensat.entities.User;
 import com.ensat.enums.Enums;
-import com.ensat.exception.Exceptions;
 import com.ensat.repositories.ITournamentRepository;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
@@ -49,7 +51,7 @@ public class TournamentService
      * Scheduled(cron = "0 0 0-20 * * *", zone = "UTC") means that tournament() function
      * runs 0th and 20th hour of every day.
      */
-    @Scheduled(cron = "0 0 0,20 * * *", zone = "UTC")
+    @Scheduled(cron = "0 24 3,20 * * *", zone = "UTC")
     public void tournament()
     {
         // create tournament periodically
